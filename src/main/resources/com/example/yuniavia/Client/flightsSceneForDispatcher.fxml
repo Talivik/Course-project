@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane onMouseClicked="#sceneClicked" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yuniavia.Client.ClientHandlerClasses.FlightsSceneForDispatcher">
+   <children>
+      <TableView fx:id="FlightsTable" layoutY="7.0" onMouseClicked="#tableClicked" prefHeight="426.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="DepartureCityColumn" prefWidth="142.60000306367874" text="Пункт отправления" />
+          <TableColumn fx:id="ArrivalCityColumn" prefWidth="153.3999786376953" text="Пункт прибытия" />
+            <TableColumn fx:id="DepartureTimeColumn" prefWidth="125.0" text="Время отправления" />
+            <TableColumn fx:id="FlightNumberColumn" prefWidth="174.20001220703125" text="Номер борта" />
+            <TableColumn fx:id="NotesColumn" prefWidth="208.4000244140625" text="Пометки" />
+        </columns>
+      </TableView>
+      <Button fx:id="EnterFlightButton" disable="true" layoutX="340.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#enterFlightClicked" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #F8F8FF;" text="Выбрать рейс" textFill="#1616a4" />
+   </children>
+</AnchorPane>

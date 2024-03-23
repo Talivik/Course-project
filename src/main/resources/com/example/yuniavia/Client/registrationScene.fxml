@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yuniavia.Client.ClientHandlerClasses.RegistrationScene">
+    <children>
+      <ImageView fitHeight="500.0" fitWidth="300.0" layoutX="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Pictures/back5.png" />
+         </image>
+      </ImageView>
+        <Button layoutX="18.0" layoutY="462.0" mnemonicParsing="false" onAction="#returnBack" prefHeight="23.0" prefWidth="81.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Назад" textFill="#1616a4" />
+        <TextField fx:id="phoneNumberField" layoutX="111.0" layoutY="141.0" prefHeight="13.0" prefWidth="134.0" promptText="+375(__)_______" style="-fx-border-radius: 5; -fx-background-color: #F8F8FF;">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="createPasswordField" layoutX="111.0" layoutY="178.0" prefHeight="23.0" prefWidth="134.0" promptText="Придумайте пароль" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="repeatPasswordField" layoutX="111.0" layoutY="207.0" prefHeight="23.0" prefWidth="134.0" promptText="Повторите пароль" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <Button contentDisplay="BOTTOM" graphicTextGap="1.0" layoutX="111.0" layoutY="260.0" mnemonicParsing="false" onAction="#signUpButton" prefHeight="27.0" prefWidth="134.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Зарегистрироваться" textFill="#1616a4">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Blend />
+         </effect></Button>
+        <TextField fx:id="firstNameField" layoutX="110.0" layoutY="53.0" prefHeight="13.0" prefWidth="134.0" promptText="Имя" style="-fx-border-radius: 5; -fx-background-color: #F8F8FF;">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="secondNameField" layoutX="110.0" layoutY="85.0" prefHeight="17.0" prefWidth="134.0" promptText="Фамилия" style="-fx-border-radius: 5; -fx-background-color: #F8F8FF;">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <Text fx:id="enterAllFields" fill="#fa3232" layoutX="15.0" layoutY="254.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Заполните все поля" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </Text>
+        <Text fx:id="passwordsNotEquals" fill="#fa3232" layoutX="60.0" layoutY="247.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароли не совпадают" textAlignment="CENTER" wrappingWidth="220.00000000000006">
+            <font>
+                <Font size="10.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </Text>
+      <Text fx:id="invalidPhoneNumber" fill="#fa3232" layoutX="112.0" layoutY="175.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Неверный формат номера " textAlignment="CENTER" wrappingWidth="144.00000000000006">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Text>
+      <Text fx:id="invalidAge" fill="#fa3232" layoutX="104.0" layoutY="253.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Возраст должен быть в диапазоне 18-80 лет" textAlignment="CENTER" wrappingWidth="220.00000000000003">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Text>
+      <Text fx:id="invalidPasswordLength" fill="#fa3232" layoutX="70.0" layoutY="247.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Длина пароля должна быть от 6 до 15 символов" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Text>
+      <Text fx:id="accountExist" fill="#fa3232" layoutX="43.0" layoutY="254.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Данный номер телефона занят" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Text>
+    </children>
+</AnchorPane>

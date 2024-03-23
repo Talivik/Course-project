@@ -1,0 +1,67 @@
+@startuml
+class com.example.yuniavia.db.DBAdapter {
+~ {static} Connection c
+~ {static} Statement statement
++ {static} void getConnection()
++ {static} ArrayList<Runway> getAllRunwaysWithFlights()
++ {static} ArrayList<Runway> getAllRunways()
++ {static} Flight getFlightForRunway(int)
++ {static} ArrayList<Flight> getAllFlights()
++ {static} boolean uniquePhoneNumberValidation(String)
++ {static} ArrayList<Account> getAllAccounts()
++ {static} void createAccount(Account)
++ {static} void updateRunwayState(Runway)
++ {static} void updateRunwayOccupation(Runway)
++ {static} void updateAccount(Account,Account)
++ {static} void deleteAccount(Account)
+}
+class com.example.yuniavia.Server.Server {
++ {static} int numConnections
++ {static} void main(String[])
+}
+class com.example.yuniavia.Server.Constants.Requests {
++ {static} String REQUEST_LOGIN
++ {static} String REQUEST_REGISTRATION
++ {static} String REQUEST_UPDATE_ACCOUNT
++ {static} String REQUEST_DELETE_ACCOUNT
++ {static} String REQUEST_SHOW_RUNWAYS
++ {static} String FLUSH
++ {static} String REQUEST_UPDATE_RUNWAY_STATE
++ {static} String REQUEST_SHOW_FLIGHTS
++ {static} String REQUEST_UPDATE_RUNWAY_OCCUPATION
++ {static} String REQUEST_SHOW_ACCOUNTS
+}
+class com.example.yuniavia.Server.MonoThreadClientHandler {
+~ Socket clientDialog
++ void run()
++ void treatment(ObjectInputStream,ObjectOutputStream)
+- void deleteAccount(ObjectOutputStream,List<Object>)
+- void updateAccounts(ObjectOutputStream,List<Object>)
+- void showAccounts(ObjectOutputStream)
+- void updateRunwayOccupation(ObjectOutputStream,List<Object>)
+- void showFlights(ObjectOutputStream)
+- void updateRunwayState(ObjectOutputStream,List<Object>)
+- void showRunways(ObjectOutputStream)
++ void authorization(ObjectOutputStream,List<Object>)
++ void actionFeedback(ObjectOutputStream,String)
++ void registration(List<Object>,ObjectOutputStream)
+}
+class com.example.yuniavia.Server.Constants.Configs {
++ {static} String ACTIVE_STATE_RUNWAY
++ {static} String NON_ACTIVE_STATE_RUNWAY
++ {static} String OCCUPATED_RUNWAY
++ {static} String NOT_OCCUPATED_RUNWAY
++ {static} String SUCCESS_ACTION
++ {static} String UNSUCCESS_ACTION
++ {static} String SERVER_HOST
++ {static} int SERVER_PORT
++ {static} String dbHost
++ {static} String dbPort
++ {static} String dbUser
++ {static} String dbPass
++ {static} String dbName
+}
+
+
+com.example.yuniavia.Server.Thread <|-- com.example.yuniavia.Server.MonoThreadClientHandler
+@enduml

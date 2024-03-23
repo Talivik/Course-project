@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yuniavia.Client.ClientHandlerClasses.CentralWorkScene">
+   <children>
+      <Button fx:id="targetButton" layoutX="306.0" layoutY="208.0" mnemonicParsing="false" onAction="#targetButtonClicked" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Button" textFill="#1616a4" textOverrun="CENTER_ELLIPSIS" />
+      <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="714.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Pictures/w512h5121390853596airport512.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="306.0" layoutY="249.0" mnemonicParsing="false" onAction="#editProfileClicked" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Профиль" textFill="#1616a4" textOverrun="CENTER_ELLIPSIS" />
+      <Button layoutX="306.0" layoutY="290.0" mnemonicParsing="false" onAction="#returnBackClicked" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Выйти из аккаунта" textFill="#1616a4" textOverrun="CENTER_ELLIPSIS" />
+   </children>
+</AnchorPane>

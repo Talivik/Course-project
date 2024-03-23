@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane onMouseClicked="#sceneClicked" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yuniavia.Client.ClientHandlerClasses.AdminEditingAccounts">
+    <children>
+        <TableView fx:id="AccountsTable" layoutY="93.0" onMouseClicked="#tableClicked" prefHeight="352.0" prefWidth="800.0">
+            <columns>
+                <TableColumn fx:id="FirstNameColumn" prefWidth="142.60000306367874" text="Имя" />
+                <TableColumn fx:id="SecondNameColumn" prefWidth="192.6000213623047" text="Фамилия" />
+                <TableColumn fx:id="PhoneNumberColumn" prefWidth="243.39999389648438" text="Номер телефона" />
+                <TableColumn fx:id="RoleColumn" prefWidth="217.5999755859375" text="Должность" />
+            </columns>
+        </TableView>
+        <Button fx:id="editButton" layoutX="287.0" layoutY="461.0" mnemonicParsing="false" onAction="#editButtonClicked" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Редактировать" textFill="#1616a4">
+            <font>
+                <Font name="ArtifaktElement-Medium" size="11.0" />
+            </font>
+        </Button>
+        <Button fx:id="deleteButton" layoutX="406.0" layoutY="461.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Удалить" textFill="#1616a4">
+            <font>
+                <Font name="ArtifaktElement-Medium" size="11.0" />
+            </font>
+        </Button>
+        <Group fx:id="editGroup" disable="true" layoutX="183.0" layoutY="165.0" opacity="0.0">
+            <children>
+                <TextField fx:id="phoneNumberField" layoutX="138.0" layoutY="137.0" prefHeight="26.0" prefWidth="162.0" promptText="+375(__)_______" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" />
+                <TextField fx:id="createPasswordField" layoutX="138.0" layoutY="193.0" prefHeight="26.0" prefWidth="162.0" promptText="Придумайте пароль" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" />
+                <TextField fx:id="repeatPasswordField" layoutX="138.0" layoutY="241.0" prefHeight="26.0" prefWidth="162.0" promptText="Повторите пароль" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" />
+                <Button layoutX="103.0" layoutY="283.0" mnemonicParsing="false" onAction="#saveEditings" prefHeight="27.0" prefWidth="226.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Сохранить изменения" textFill="#1616a4" />
+                <TextField fx:id="firstNameField" layoutX="137.0" layoutY="1.0" prefHeight="26.0" prefWidth="164.0" promptText="Имя" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" />
+                <TextField fx:id="secondNameField" layoutX="138.0" layoutY="43.0" prefHeight="26.0" prefWidth="162.0" promptText="Фамилия" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" />
+                <Text fx:id="enterAllFields" fill="#fa3232" layoutX="61.0" layoutY="277.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Заполните все поля" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Text>
+                <Text fx:id="passwordsNotEquals" fill="#fa3232" layoutX="100.0" layoutY="280.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароли не совпадают" textAlignment="CENTER" wrappingWidth="220.00000000000006">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Text>
+                <Text fx:id="invalidPhoneNumber" fill="#fa3232" layoutX="144.0" layoutY="174.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Неверный формат номера " textAlignment="CENTER" wrappingWidth="144.00000000000006">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Text>
+                <Text fx:id="invalidPasswordLength" fill="#fa3232" layoutX="85.0" layoutY="280.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Длина пароля должна быть от 6 до 15 символов" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Text>
+                <Text fx:id="accountExist" fill="#fa3232" layoutX="75.0" layoutY="279.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Данный номер телефона занят" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Text>
+                <SplitMenuButton fx:id="roleMenu" layoutX="138.0" layoutY="87.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: #F8F8FF;" text="Роль" textFill="#1616a4">
+                    <items>
+                        <MenuItem fx:id="dispatcherInMenu" mnemonicParsing="false" onAction="#dispatcherClicked" text="Диспетчер" />
+                        <MenuItem fx:id="adminInMenu" mnemonicParsing="false" onAction="#adminClicked" text="Администратор" />
+                    </items>
+                </SplitMenuButton>
+                <Text fill="#1616a4" layoutX="144.0" layoutY="-4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" wrappingWidth="95.20000000000005" />
+                <Text fill="#1616a4" layoutX="144.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" wrappingWidth="95.20000000000005" />
+                <Text fill="#1616a4" layoutX="144.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер телефона" wrappingWidth="95.20000000000005" />
+                <Text fill="#1616a4" layoutX="144.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" wrappingWidth="95.20000000000005" />
+                <Text fill="#1616a4" layoutX="144.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Повтор пароля" wrappingWidth="95.20000000000005" />
+                <Text fill="#1616a4" layoutX="144.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Роль" wrappingWidth="95.20000000000005" />
+            <Button fx:id="cancelEditingButton" layoutX="106.0" layoutY="315.0" mnemonicParsing="false" onAction="#cancelEditingButtonClicked" prefHeight="27.0" prefWidth="226.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Отменить редактирование" textFill="#1616a4" />
+            </children>
+        </Group>
+      <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="716.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Pictures/w512h5121390853596airport512.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="returnBackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnBackButtonClicked" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Назад" textFill="#1616a4">
+         <font>
+            <Font name="ArtifaktElement-Medium" size="11.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

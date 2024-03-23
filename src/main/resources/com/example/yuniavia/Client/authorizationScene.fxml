@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yuniavia.Client.ClientHandlerClasses.AuthorizationScene">
+        <children>
+            <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <children>
+            <ImageView fx:id="image" blendMode="MULTIPLY" fitHeight="79.0" fitWidth="78.0" layoutX="705.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="4.6">
+               <image>
+                  <Image url="@../../../../Pictures/w512h5121390853596airport512.png" />
+               </image>
+            </ImageView>
+                    <TextField fx:id="loginField" layoutX="306.0" layoutY="195.0" prefHeight="35.0" prefWidth="200.0" promptText="Логин" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;">
+                        <font>
+                            <Font name="ArtifaktElement-Heavy" size="12.0" />
+                        </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+                    </TextField>
+                    <PasswordField fx:id="passwordField" layoutX="306.0" layoutY="238.0" prefHeight="35.0" prefWidth="200.0" promptText="Пароль" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;">
+                        <font>
+                            <Font name="Artifakt Element Heavy Italic" size="12.0" />
+                        </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+                    </PasswordField>
+                    <Button fx:id="signInButton" contentDisplay="CENTER" layoutX="354.0" layoutY="298.0" mnemonicParsing="false" onAction="#signInClicked" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Войти" textFill="#1616a4" textOverrun="CENTER_ELLIPSIS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                    </Button>
+                    <Button layoutX="354.0" layoutY="332.0" mnemonicParsing="false" onAction="#regInClicked" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Регистрация" textFill="#1616a4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                    </Button>
+                    <Text fx:id="enterAllFields" fill="#fa3232" layoutX="251.0" layoutY="287.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Заполните все поля" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="DEFAULT" />
+                        </cursor>
+                    </Text>
+                    <Text fx:id="accountNotFound" fill="#fa3232" layoutX="251.0" layoutY="288.0" opacity="0.0" stroke="#868615" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Аккаунт не найден" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="DEFAULT" />
+                        </cursor>
+                    </Text>
+            <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="271.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/logIn.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="271.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/password.png" />
+               </image>
+            </ImageView>
+
+                </children>
+            </AnchorPane>
+        </children>
+</AnchorPane>

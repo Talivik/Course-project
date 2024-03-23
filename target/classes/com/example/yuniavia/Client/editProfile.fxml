@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yuniavia.Client.ClientHandlerClasses.EditProfile">
+   <children>
+      <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="706.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Pictures/w512h5121390853596airport512.png" />
+         </image></ImageView>
+      <Button fx:id="returnBackButton" layoutX="22.0" layoutY="555.0" mnemonicParsing="false" onAction="#returnBackButtonClicked" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Назад" textFill="#1616a4">
+         <font>
+            <Font name="ArtifaktElement-Medium" size="11.0" />
+         </font>
+      </Button>
+      <Text fx:id="YuniGO1" fill="#1616a4" layoutX="-86.0" layoutY="27.0" opacity="0.7" stroke="#1616a4" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" text="Настройки профиля" textAlignment="CENTER" wrappingWidth="321.0000305175782" />
+      <Text fill="#1616a4" layoutX="265.0" layoutY="142.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" wrappingWidth="89.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="phoneNumberText" fill="#1616a4" layoutX="265.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер телефона" textAlignment="CENTER" wrappingWidth="264.1366882324219">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#1616a4" layoutX="265.0" layoutY="202.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" wrappingWidth="89.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="nameText" fill="#1616a4" layoutX="265.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" wrappingWidth="214.13673400878906">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="surnameText" fill="#1616a4" layoutX="265.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" wrappingWidth="214.13673400878906">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="74.0" layoutX="265.0" layoutY="51.0" stroke="#3232d7" strokeType="INSIDE" strokeWidth="3.0" width="264.0" />
+      <Button fx:id="changePasswordButton" layoutX="265.0" layoutY="276.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="26.0" prefWidth="264.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Смена пароля" textFill="#1616a4">
+         <font>
+            <Font name="ArtifaktElement-Medium" size="11.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="oldPasswordField" disable="true" layoutX="265.0" layoutY="262.0" opacity="0.0" prefHeight="27.0" prefWidth="264.0" promptText="Старый пароль" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;">
+         <font>
+            <Font name="Artifakt Element Heavy Italic" size="12.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="newPasswordField" disable="true" layoutX="265.0" layoutY="296.0" opacity="0.0" prefHeight="27.0" prefWidth="264.0" promptText="Новый пароль" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;">
+         <font>
+            <Font name="Artifakt Element Heavy Italic" size="12.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="repeatPasswordField" disable="true" layoutX="265.0" layoutY="330.0" opacity="0.0" prefHeight="27.0" prefWidth="264.0" promptText="Повторите новый пароль" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;">
+         <font>
+            <Font name="Artifakt Element Heavy Italic" size="12.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="savePasswordEditionsButton" disable="true" layoutX="265.0" layoutY="373.0" mnemonicParsing="false" onAction="#savePasswordEditions" opacity="0.0" prefHeight="26.0" prefWidth="264.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Изменить пароль" textFill="#1616a4">
+         <font>
+            <Font name="ArtifaktElement-Medium" size="11.0" />
+         </font>
+      </Button>
+      <Text fx:id="passwordsNotEquals" fill="#fa3232" layoutX="242.0" layoutY="367.0" opacity="0.0" stroke="#e667af" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароли не совпадают" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="invalidPasswordLength" fill="#fa3232" layoutX="242.0" layoutY="367.0" opacity="0.0" stroke="#e667af" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Длина пароля должна быть от 6 до 15 символов" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Button fx:id="hideChangePasswordButton" disable="true" layoutX="268.0" layoutY="414.0" mnemonicParsing="false" onAction="#hideChangePassword" opacity="0.0" prefHeight="26.0" prefWidth="264.0" style="-fx-background-color: #F8F8FF; -fx-border-radius: 5;" text="Скрыть изменение пароля" textFill="#1616a4" AnchorPane.bottomAnchor="165.0" AnchorPane.topAnchor="414.0">
+         <font>
+            <Font name="ArtifaktElement-Medium" size="11.0" />
+         </font>
+      </Button>
+      <Text fx:id="oldPasswordNotCorrect" fill="#fa3232" layoutX="251.0" layoutY="367.0" opacity="0.0" stroke="#e667af" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Старый пароль введён неверно" textAlignment="CENTER" wrappingWidth="310.00000000000006">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

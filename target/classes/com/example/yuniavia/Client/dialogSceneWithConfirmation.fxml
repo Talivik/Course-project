@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yuniavia.Client.ClientHandlerClasses.DialogSceneWithConfirmation">
+    <children>
+        <Button fx:id="noButton" layoutX="210.0" layoutY="200.0" mnemonicParsing="false" onAction="#noButton" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #F8F8FF;" text="Нет" textFill="#1616a4" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="200.0" />
+      <Text fill="#1616a4" layoutX="47.0" layoutY="133.0" stroke="#1616a4" strokeType="INSIDE" strokeWidth="0.0" text="Вы действительно хотите продолжить?" textAlignment="CENTER" wrappingWidth="304.51560974121094">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Button fx:id="yesButton" layoutX="98.0" layoutY="200.0" mnemonicParsing="false" onAction="#yesButton" prefHeight="21.0" prefWidth="86.0" style="-fx-background-color: #F8F8FF;" text="Да" textFill="#1616a4" />
+    </children>
+</AnchorPane>
